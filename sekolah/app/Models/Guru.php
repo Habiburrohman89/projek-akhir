@@ -9,6 +9,12 @@ class Guru extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'nip',
+        'nama',
+        'alamat',
+    ];
+
 
     public function siswa()
     {
