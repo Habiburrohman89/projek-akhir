@@ -9,6 +9,12 @@ class Siswa extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'nis',
+        'nama',
+        'alamat',
+    ];
+
     public function guru()
     {
         return $this->belongsTo(guru::class);
