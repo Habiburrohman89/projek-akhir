@@ -4,6 +4,10 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\MapelController;
 use App\Http\Controllers\GurumapelController;
+use App\Http\Controllers\HariController;
+use App\Http\Controllers\KelasController;
+use App\Http\Controllers\JadwalController;
+use App\Models\Jadwal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -50,3 +54,25 @@ Route::post('gurumapel', [GurumapelController::class, 'store']);
 Route::get('gurumapel/{id}', [GurumapelController::class, 'show']);
 Route::put('gurumapel/{id}', [GurumapelController::class, 'update']);
 Route::delete('gurumapel/{id}', [GurumapelController::class, 'destroy']);
+
+// root hari
+Route::get('hari', [HariController::class, 'index']);
+Route::post('hari', [HariController::class, 'store']);
+Route::get('hari/{id}', [HariController::class, 'show']);
+Route::put('hari/{id}', [HariController::class, 'update']);
+Route::delete('hari/{id}', [HariController::class, 'destroy']);
+
+// root hari
+Route::get('kelas', [KelasController::class, 'index']);
+Route::post('kelas', [KelasController::class, 'store']);
+Route::get('kelas/{id}', [KelasController::class, 'show']);
+Route::put('kelas/{id}', [KelasController::class, 'update']);
+Route::delete('kelas/{id}', [KelasController::class, 'destroy']);
+
+
+// root jadwal
+Route::get('jadwal', [JadwalController::class, 'index']);
+Route::post('jadwal', [JadwalController::class, 'store']);
+Route::get('jadwal/{id}', [JadwalController::class, 'show']);
+Route::put('jadwal/{id}', [JadwalController::class, 'update']);
+Route::delete('jadwal/{id}', [JadwalController::class, 'destroy']);
