@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class GuruMapel extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'guru_id',
+        'mapel_id',
+    ];
 }
